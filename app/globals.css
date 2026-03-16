@@ -186,8 +186,8 @@ a { color: inherit; text-decoration: none; }
 /* ── Pricing ────────────────────────────────────────────── */
 .pricing { padding: 100px 0; }
 .pricing-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr);
-  gap: 20px; max-width: 780px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 16px; max-width: 1100px; margin: 0 auto;
 }
 .pricing-card {
   position: relative;
@@ -206,6 +206,15 @@ a { color: inherit; text-decoration: none; }
   background: rgba(90, 61, 232, 0.04);
 }
 .pricing-card-premium:hover { border-color: rgba(90, 61, 232, 0.5); }
+.pricing-card-highlight {
+  border-color: rgba(90, 61, 232, 0.5);
+  background: rgba(90, 61, 232, 0.06);
+  box-shadow: 0 0 40px rgba(90, 61, 232, 0.08);
+}
+.pricing-card-highlight:hover {
+  border-color: rgba(90, 61, 232, 0.7);
+  box-shadow: 0 0 50px rgba(90, 61, 232, 0.12);
+}
 .pricing-popular-badge {
   position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
   background: linear-gradient(135deg, #6b4cff, #9b6bff);
@@ -219,7 +228,7 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;
 }
 .pricing-price { display: flex; align-items: baseline; gap: 4px; margin-bottom: 8px; }
-.pricing-amount { font-size: 42px; font-weight: 800; color: #fff; }
+.pricing-amount { font-size: 36px; font-weight: 800; color: #fff; }
 .pricing-period { font-size: 14px; color: #666; }
 .pricing-gradient {
   background: linear-gradient(135deg, #7C5CFC, #a78bfa);
@@ -304,9 +313,12 @@ a { color: inherit; text-decoration: none; }
 .footer-copy { font-size: 12px; color: #555; }
 
 /* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 768px) {
   .features-grid { grid-template-columns: 1fr; }
-  .pricing-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; max-width: 380px; }
   .steps-row { flex-direction: column; }
   .step-arrow { transform: rotate(90deg); }
   .hero-actions { flex-direction: column; align-items: center; }

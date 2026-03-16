@@ -222,15 +222,54 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Premium Plan */}
+            {/* Monthly Plan */}
             <div className="pricing-card pricing-card-premium">
-              <div className="pricing-popular-badge">Most Popular</div>
               <div className="pricing-card-header">
-                <h3 className="pricing-plan-name">Premium</h3>
+                <h3 className="pricing-plan-name">Monthly</h3>
                 <div className="pricing-price">
-                  <span className="pricing-amount pricing-gradient">PRO</span>
+                  <span className="pricing-amount pricing-gradient">$4.99</span>
+                  <span className="pricing-period">/month</span>
                 </div>
-                <p className="pricing-plan-desc">Monthly, yearly, and lifetime plans available</p>
+                <p className="pricing-plan-desc">Flexible month-to-month access</p>
+              </div>
+              <ul className="pricing-features">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Everything in Free
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  1,000+ advanced tweaks
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  DMND Game Mode
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  BIOS optimization
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Cancel anytime
+                </li>
+              </ul>
+              <a href="https://buy.stripe.com/test_3cIcN5foLceFasc2nh53O00" target="_blank" rel="noopener noreferrer" className="pricing-btn pricing-btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2l3 6 6 3-6 3-3 6-3-6-6-3 6-3 3-6z" /></svg>
+                Get Monthly
+              </a>
+            </div>
+
+            {/* Yearly Plan */}
+            <div className="pricing-card pricing-card-premium pricing-card-highlight">
+              <div className="pricing-popular-badge">Best Value</div>
+              <div className="pricing-card-header">
+                <h3 className="pricing-plan-name">Yearly</h3>
+                <div className="pricing-price">
+                  <span className="pricing-amount pricing-gradient">$29.99</span>
+                  <span className="pricing-period">/year</span>
+                </div>
+                <p className="pricing-plan-desc">Save 50% vs monthly</p>
               </div>
               <ul className="pricing-features">
                 <li>
@@ -258,9 +297,47 @@ export default function Home() {
                   Priority support
                 </li>
               </ul>
-              <a href="https://github.com/DMNDCertified/dmnd-tweaks/releases/latest" target="_blank" rel="noopener noreferrer" className="pricing-btn pricing-btn-primary">
+              <a href="https://buy.stripe.com/test_14A8wPfoL92t6bWe5Z53O01" target="_blank" rel="noopener noreferrer" className="pricing-btn pricing-btn-primary">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2l3 6 6 3-6 3-3 6-3-6-6-3 6-3 3-6z" /></svg>
-                Get Premium
+                Get Yearly
+              </a>
+            </div>
+
+            {/* Lifetime Plan */}
+            <div className="pricing-card pricing-card-premium">
+              <div className="pricing-card-header">
+                <h3 className="pricing-plan-name">Lifetime</h3>
+                <div className="pricing-price">
+                  <span className="pricing-amount pricing-gradient">$49.99</span>
+                  <span className="pricing-period">one-time</span>
+                </div>
+                <p className="pricing-plan-desc">Pay once, own it forever</p>
+              </div>
+              <ul className="pricing-features">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Everything in Free
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  1,000+ advanced tweaks
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  DMND Game Mode
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  All future updates included
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Priority support forever
+                </li>
+              </ul>
+              <a href="https://buy.stripe.com/test_3cIcN5foLemN1VG5zt53O02" target="_blank" rel="noopener noreferrer" className="pricing-btn pricing-btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2l3 6 6 3-6 3-3 6-3-6-6-3 6-3 3-6z" /></svg>
+                Get Lifetime
               </a>
             </div>
           </div>
