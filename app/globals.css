@@ -183,6 +183,81 @@ a { color: inherit; text-decoration: none; }
 .step-desc { font-size: 13px; color: #777; line-height: 1.6; }
 .step-arrow { color: #333; flex-shrink: 0; }
 
+/* ── Pricing ────────────────────────────────────────────── */
+.pricing { padding: 100px 0; }
+.pricing-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 20px; max-width: 780px; margin: 0 auto;
+}
+.pricing-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px; padding: 36px 32px;
+  display: flex; flex-direction: column;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.pricing-card:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+.pricing-card-premium {
+  border-color: rgba(90, 61, 232, 0.3);
+  background: rgba(90, 61, 232, 0.04);
+}
+.pricing-card-premium:hover { border-color: rgba(90, 61, 232, 0.5); }
+.pricing-popular-badge {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: linear-gradient(135deg, #6b4cff, #9b6bff);
+  color: #fff; font-size: 11px; font-weight: 700;
+  padding: 5px 16px; border-radius: 999px;
+  text-transform: uppercase; letter-spacing: 0.8px;
+}
+.pricing-card-header { margin-bottom: 24px; }
+.pricing-plan-name {
+  font-size: 16px; font-weight: 600; color: #999;
+  text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;
+}
+.pricing-price { display: flex; align-items: baseline; gap: 4px; margin-bottom: 8px; }
+.pricing-amount { font-size: 42px; font-weight: 800; color: #fff; }
+.pricing-period { font-size: 14px; color: #666; }
+.pricing-gradient {
+  background: linear-gradient(135deg, #7C5CFC, #a78bfa);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.pricing-plan-desc { font-size: 13px; color: #666; }
+.pricing-features {
+  list-style: none; display: flex; flex-direction: column;
+  gap: 12px; margin-bottom: 28px; flex: 1;
+}
+.pricing-features li {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px; color: #ccc;
+}
+.pricing-btn {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%; padding: 14px; border-radius: 12px;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  transition: 0.2s; border: none; text-decoration: none;
+}
+.pricing-btn-secondary {
+  background: rgba(255, 255, 255, 0.06); color: #ccc;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.pricing-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.pricing-btn-primary {
+  background: linear-gradient(135deg, #5a3de8, #7C5CFC); color: #fff;
+  box-shadow: 0 4px 20px rgba(90, 61, 232, 0.3);
+}
+.pricing-btn-primary:hover {
+  box-shadow: 0 8px 32px rgba(90, 61, 232, 0.45);
+  transform: translateY(-1px);
+}
+
 /* ── Download CTA ───────────────────────────────────────── */
 .download { padding: 100px 0; }
 .download-box {
@@ -231,6 +306,7 @@ a { color: inherit; text-decoration: none; }
 /* ── Responsive ─────────────────────────────────────────── */
 @media (max-width: 768px) {
   .features-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; }
   .steps-row { flex-direction: column; }
   .step-arrow { transform: rotate(90deg); }
   .hero-actions { flex-direction: column; align-items: center; }
