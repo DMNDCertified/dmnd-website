@@ -254,7 +254,7 @@ export default function Home() {
                   Cancel anytime
                 </li>
               </ul>
-              <a href="https://buy.stripe.com/test_3cIcN5foLceFasc2nh53O00" target="_blank" rel="noopener noreferrer" className="pricing-btn pricing-btn-primary">
+              <a href="https://buy.stripe.com/bJe6oHccm4wL3RY1Ww3gk03" target="_blank" rel="noopener noreferrer" className="pricing-btn pricing-btn-primary">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2l3 6 6 3-6 3-3 6-3-6-6-3 6-3 3-6z" /></svg>
                 Get Monthly
               </a>
@@ -297,7 +297,7 @@ export default function Home() {
                   Priority support
                 </li>
               </ul>
-              <a href="https://buy.stripe.com/test_14A8wPfoL92t6bWe5Z53O01" target="_blank" rel="noopener noreferrer" className="pricing-btn pricing-btn-primary">
+              <a href="https://buy.stripe.com/6oU5kDa4efbp2NUbx63gk04" target="_blank" rel="noopener noreferrer" className="pricing-btn pricing-btn-primary">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2l3 6 6 3-6 3-3 6-3-6-6-3 6-3 3-6z" /></svg>
                 Get Yearly
               </a>
@@ -335,7 +335,7 @@ export default function Home() {
                   Priority support forever
                 </li>
               </ul>
-              <a href="https://buy.stripe.com/test_3cIcN5foLemN1VG5zt53O02" target="_blank" rel="noopener noreferrer" className="pricing-btn pricing-btn-primary">
+              <a href="https://buy.stripe.com/6oUfZhdgqaV9bkqfNm3gk05" target="_blank" rel="noopener noreferrer" className="pricing-btn pricing-btn-primary">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2l3 6 6 3-6 3-3 6-3-6-6-3 6-3 3-6z" /></svg>
                 Get Lifetime
               </a>
