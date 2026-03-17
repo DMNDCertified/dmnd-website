@@ -4,367 +4,198 @@ export default function Home() {
       {/* Nav */}
       <nav className="nav">
         <div className="nav-inner">
-          <div className="nav-brand">
-            <div className="nav-logo">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-              </svg>
-            </div>
-            <span className="nav-name">DMND Tweaks</span>
-          </div>
+          <a href="/" className="nav-brand">
+            <span className="nav-diamond">&#9670;</span>
+            <span className="nav-name">DMND</span>
+          </a>
           <div className="nav-links">
             <a href="#features">Features</a>
-            <a href="#pricing">Premium</a>
+            <a href="#pricing">Pricing</a>
             <a href="https://github.com/DMNDCertified/dmnd-tweaks/releases/latest" target="_blank" rel="noopener noreferrer" className="nav-cta">Download</a>
           </div>
         </div>
       </nav>
 
-      {/* Hero */}
+      {/* Hero — left aligned, no glow orb */}
       <section className="hero">
-        <div className="hero-glow" />
-        <div className="hero-content">
-          <div className="hero-badge">
-            <span className="hero-badge-dot" />
-            Windows Optimization Tool
-          </div>
-          <h1 className="hero-title">
-            Unlock Your PC's
-            <br />
-            <span className="hero-gradient">Full Potential</span>
-          </h1>
-          <p className="hero-subtitle">
-            225+ tweaks to boost FPS, reduce input delay, and optimize your
-            Windows system. One click at a time.
-          </p>
-          <div className="hero-actions">
-            <a href="https://github.com/DMNDCertified/dmnd-tweaks/releases/latest" target="_blank" rel="noopener noreferrer" className="btn-primary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
-              Download Free
-            </a>
-            <a href="#features" className="btn-secondary">
-              Learn More
-            </a>
-          </div>
-          <div className="hero-stats">
-            <div className="hero-stat">
-              <span className="hero-stat-num">225+</span>
-              <span className="hero-stat-label">Tweaks</span>
+        <div className="hero-inner">
+          <div className="hero-text">
+            <p className="hero-tag">Windows optimization, done right.</p>
+            <h1 className="hero-title">
+              Stop tweaking blindly.<br />
+              Let DMND do the work.
+            </h1>
+            <p className="hero-subtitle">
+              225+ registry and system tweaks that actually matter.
+              Built for gamers who want less input delay, more FPS,
+              and a cleaner Windows install. Free to start.
+            </p>
+            <div className="hero-actions">
+              <a href="https://github.com/DMNDCertified/dmnd-tweaks/releases/latest" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                Download for Windows
+                <span className="btn-meta">v1.0 &middot; 80MB &middot; Win 10/11</span>
+              </a>
             </div>
-            <div className="hero-stat-divider" />
-            <div className="hero-stat">
-              <span className="hero-stat-num">100%</span>
-              <span className="hero-stat-label">Reversible</span>
+          </div>
+          <div className="hero-terminal">
+            <div className="terminal-bar">
+              <span className="terminal-dot red" />
+              <span className="terminal-dot yellow" />
+              <span className="terminal-dot green" />
+              <span className="terminal-title">dmnd-tweaks</span>
             </div>
-            <div className="hero-stat-divider" />
-            <div className="hero-stat">
-              <span className="hero-stat-num">Free</span>
-              <span className="hero-stat-label">To Use</span>
+            <div className="terminal-body">
+              <p><span className="t-dim">$</span> dmnd scan --hardware</p>
+              <p className="t-dim">Detected: RTX 4070 &middot; R7 7800X3D &middot; 32GB DDR5</p>
+              <p>&nbsp;</p>
+              <p><span className="t-dim">$</span> dmnd apply --profile gaming</p>
+              <p className="t-accent">&#10003; GPU shader cache optimized</p>
+              <p className="t-accent">&#10003; Timer resolution set to 0.5ms</p>
+              <p className="t-accent">&#10003; Nagle&apos;s algorithm disabled</p>
+              <p className="t-accent">&#10003; 47 tweaks applied successfully</p>
+              <p>&nbsp;</p>
+              <p className="t-dim">Ready. Your PC is faster now.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features */}
+      {/* Social proof strip */}
+      <div className="proof-strip">
+        <div className="proof-inner">
+          <div className="proof-item">
+            <span className="proof-num">225+</span>
+            <span className="proof-label">tweaks available</span>
+          </div>
+          <div className="proof-item">
+            <span className="proof-num">100%</span>
+            <span className="proof-label">reversible</span>
+          </div>
+          <div className="proof-item">
+            <span className="proof-num">0</span>
+            <span className="proof-label">bloatware included</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Features — bento grid, not uniform cards */}
       <section className="features" id="features">
         <div className="section-inner">
-          <div className="section-header">
-            <span className="section-tag">Features</span>
-            <h2 className="section-title">Everything you need to optimize</h2>
-            <p className="section-subtitle">
-              From GPU settings to network tweaks, DMND covers every aspect of
-              Windows performance.
-            </p>
-          </div>
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
-              </div>
-              <h3 className="feature-name">GPU Optimization</h3>
-              <p className="feature-desc">
-                72 GPU tweaks for NVIDIA, AMD, and Intel. Profile tuning, shader cache, power states, and more.
-              </p>
+          <h2 className="feat-heading">What it actually does</h2>
+          <div className="bento">
+            <div className="bento-card bento-wide">
+              <div className="bento-label">GPU</div>
+              <h3>72 GPU tweaks for NVIDIA, AMD &amp; Intel</h3>
+              <p>Profile tuning, shader cache, power states, CUDA scheduling. Auto-detects your card and only shows what applies.</p>
             </div>
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>
-              </div>
-              <h3 className="feature-name">Lower Input Delay</h3>
-              <p className="feature-desc">
-                Timer resolution, DPC latency, mouse polling, and kernel-level optimizations for competitive gaming.
-              </p>
+            <div className="bento-card">
+              <div className="bento-label">INPUT</div>
+              <h3>Lower input delay</h3>
+              <p>Timer resolution, DPC latency fixes, mouse polling optimization. Built for competitive FPS players.</p>
             </div>
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
-              </div>
-              <h3 className="feature-name">Privacy & Telemetry</h3>
-              <p className="feature-desc">
-                Disable Windows telemetry, Cortana, activity history, and data collection services in one click.
-              </p>
+            <div className="bento-card">
+              <div className="bento-label">NETWORK</div>
+              <h3>Less ping, more stable</h3>
+              <p>Disable Nagle&apos;s, optimize TCP, tune DNS settings and adapter config for lower latency.</p>
             </div>
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
-              </div>
-              <h3 className="feature-name">Network Tweaks</h3>
-              <p className="feature-desc">
-                Nagle's algorithm, TCP optimizations, DNS settings, and adapter tuning for lower ping.
-              </p>
+            <div className="bento-card">
+              <div className="bento-label">PRIVACY</div>
+              <h3>Kill telemetry</h3>
+              <p>Disable Cortana, activity history, diagnostic data, and every data collection service Windows runs in the background.</p>
             </div>
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2" /><rect x="9" y="9" width="6" height="6" /></svg>
-              </div>
-              <h3 className="feature-name">CPU & Power</h3>
-              <p className="feature-desc">
-                Core parking, power plans, thread scheduling, and CPU-specific tweaks for Intel and AMD.
-              </p>
+            <div className="bento-card bento-wide">
+              <div className="bento-label">SMART</div>
+              <h3>Hardware-aware recommendations</h3>
+              <p>DMND reads your CPU, GPU, RAM, and storage. Then recommends only the tweaks that make sense for your specific build. No guessing.</p>
             </div>
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /></svg>
-              </div>
-              <h3 className="feature-name">Smart Detection</h3>
-              <p className="feature-desc">
-                Automatically detects your hardware and recommends the best tweaks for your specific system.
-              </p>
+            <div className="bento-card">
+              <div className="bento-label">CPU</div>
+              <h3>Core parking &amp; power</h3>
+              <p>Thread scheduling, power plans, CPU-specific tweaks for Intel and AMD. Unlock what Windows locks down.</p>
+            </div>
+            <div className="bento-card">
+              <div className="bento-label">SAFE</div>
+              <h3>Every tweak is reversible</h3>
+              <p>Toggle anything off with one click. No permanent changes, no bricked systems. Just better performance when you want it.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="how-it-works" id="how-it-works">
-        <div className="section-inner">
-          <div className="section-header">
-            <span className="section-tag">How It Works</span>
-            <h2 className="section-title">Three steps to a faster PC</h2>
-          </div>
-          <div className="steps-row">
-            <div className="step-card">
-              <div className="step-number">1</div>
-              <h3 className="step-name">Download & Install</h3>
-              <p className="step-desc">
-                Grab the installer, run it, and launch DMND Tweaks. No account required.
-              </p>
-            </div>
-            <div className="step-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" strokeWidth="2"><polyline points="9 18 15 12 9 6" /></svg>
-            </div>
-            <div className="step-card">
-              <div className="step-number">2</div>
-              <h3 className="step-name">Choose Your Goal</h3>
-              <p className="step-desc">
-                FPS boost, lower latency, or balanced — we'll recommend the right tweaks for you.
-              </p>
-            </div>
-            <div className="step-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" strokeWidth="2"><polyline points="9 18 15 12 9 6" /></svg>
-            </div>
-            <div className="step-card">
-              <div className="step-number">3</div>
-              <h3 className="step-name">Apply & Enjoy</h3>
-              <p className="step-desc">
-                Toggle tweaks on or off with a single click. Every change is fully reversible.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Premium / Pricing */}
+      {/* Pricing */}
       <section className="pricing" id="pricing">
         <div className="section-inner">
-          <div className="section-header">
-            <span className="section-tag">Premium</span>
-            <h2 className="section-title">Unlock your PC's full potential</h2>
-            <p className="section-subtitle">
-              Start free or go premium for advanced tweaks, Game Mode, and more.
-            </p>
-          </div>
-          <div className="pricing-grid">
-            {/* Free Plan */}
-            <div className="pricing-card">
-              <div className="pricing-card-header">
-                <h3 className="pricing-plan-name">Free</h3>
-                <div className="pricing-price">
-                  <span className="pricing-amount">$0</span>
-                  <span className="pricing-period">forever</span>
-                </div>
-                <p className="pricing-plan-desc">Get started with essential tweaks</p>
-              </div>
-              <ul className="pricing-features">
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  225+ system tweaks
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  GPU, CPU, Network optimization
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  Smart hardware detection
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  Privacy &amp; telemetry controls
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  Fully reversible changes
-                </li>
+          <h2 className="feat-heading">Simple pricing</h2>
+          <p className="pricing-desc">Start free. Upgrade when you want the full toolkit.</p>
+
+          <div className="price-grid">
+            <div className="price-card">
+              <h3>Free</h3>
+              <div className="price-amount">$0</div>
+              <p className="price-note">No card required</p>
+              <ul>
+                <li>225+ system tweaks</li>
+                <li>GPU, CPU, Network optimization</li>
+                <li>Smart hardware detection</li>
+                <li>Privacy controls</li>
+                <li>Fully reversible</li>
               </ul>
-              <a href="https://github.com/DMNDCertified/dmnd-tweaks/releases/latest" target="_blank" rel="noopener noreferrer" className="pricing-btn pricing-btn-secondary">
-                Download Free
+              <a href="https://github.com/DMNDCertified/dmnd-tweaks/releases/latest" target="_blank" rel="noopener noreferrer" className="price-btn price-btn-outline">
+                Download free
               </a>
             </div>
 
-            {/* Monthly Plan */}
-            <div className="pricing-card pricing-card-premium">
-              <div className="pricing-card-header">
-                <h3 className="pricing-plan-name">Monthly</h3>
-                <div className="pricing-price">
-                  <span className="pricing-amount pricing-gradient">$4.99</span>
-                  <span className="pricing-period">/month</span>
-                </div>
-                <p className="pricing-plan-desc">Flexible month-to-month access</p>
-              </div>
-              <ul className="pricing-features">
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  Everything in Free
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  1,000+ advanced tweaks
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  DMND Game Mode
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  BIOS optimization
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  Cancel anytime
-                </li>
+            <div className="price-card price-card-pop">
+              <span className="price-badge">popular</span>
+              <h3>Yearly</h3>
+              <div className="price-amount">$29.99<span>/yr</span></div>
+              <p className="price-note">$2.50/mo &middot; save 50%</p>
+              <ul>
+                <li>Everything in Free</li>
+                <li>1,000+ advanced tweaks</li>
+                <li>DMND Game Mode</li>
+                <li>BIOS optimization</li>
+                <li>Advanced network tuning</li>
+                <li>Priority support</li>
               </ul>
-              <a href="https://buy.stripe.com/bJe6oHccm4wL3RY1Ww3gk03" target="_blank" rel="noopener noreferrer" className="pricing-btn pricing-btn-primary">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2l3 6 6 3-6 3-3 6-3-6-6-3 6-3 3-6z" /></svg>
-                Get Monthly
+              <a href="https://buy.stripe.com/6oU5kDa4efbp2NUbx63gk04" target="_blank" rel="noopener noreferrer" className="price-btn price-btn-fill">
+                Get yearly
               </a>
             </div>
 
-            {/* Yearly Plan */}
-            <div className="pricing-card pricing-card-premium pricing-card-highlight">
-              <div className="pricing-popular-badge">Best Value</div>
-              <div className="pricing-card-header">
-                <h3 className="pricing-plan-name">Yearly</h3>
-                <div className="pricing-price">
-                  <span className="pricing-amount pricing-gradient">$29.99</span>
-                  <span className="pricing-period">/year</span>
-                </div>
-                <p className="pricing-plan-desc">Save 50% vs monthly</p>
-              </div>
-              <ul className="pricing-features">
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  Everything in Free
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  1,000+ advanced tweaks
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  DMND Game Mode
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  BIOS optimization
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  Advanced network optimization
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  Priority support
-                </li>
+            <div className="price-card">
+              <h3>Lifetime</h3>
+              <div className="price-amount">$49.99</div>
+              <p className="price-note">One-time payment</p>
+              <ul>
+                <li>Everything in Free</li>
+                <li>1,000+ advanced tweaks</li>
+                <li>DMND Game Mode</li>
+                <li>All future updates</li>
+                <li>Priority support forever</li>
               </ul>
-              <a href="https://buy.stripe.com/6oU5kDa4efbp2NUbx63gk04" target="_blank" rel="noopener noreferrer" className="pricing-btn pricing-btn-primary">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2l3 6 6 3-6 3-3 6-3-6-6-3 6-3 3-6z" /></svg>
-                Get Yearly
-              </a>
-            </div>
-
-            {/* Lifetime Plan */}
-            <div className="pricing-card pricing-card-premium">
-              <div className="pricing-card-header">
-                <h3 className="pricing-plan-name">Lifetime</h3>
-                <div className="pricing-price">
-                  <span className="pricing-amount pricing-gradient">$49.99</span>
-                  <span className="pricing-period">one-time</span>
-                </div>
-                <p className="pricing-plan-desc">Pay once, own it forever</p>
-              </div>
-              <ul className="pricing-features">
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  Everything in Free
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  1,000+ advanced tweaks
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  DMND Game Mode
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  All future updates included
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  Priority support forever
-                </li>
-              </ul>
-              <a href="https://buy.stripe.com/6oUfZhdgqaV9bkqfNm3gk05" target="_blank" rel="noopener noreferrer" className="pricing-btn pricing-btn-primary">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2l3 6 6 3-6 3-3 6-3-6-6-3 6-3 3-6z" /></svg>
-                Get Lifetime
+              <a href="https://buy.stripe.com/6oUfZhdgqaV9bkqfNm3gk05" target="_blank" rel="noopener noreferrer" className="price-btn price-btn-outline">
+                Get lifetime
               </a>
             </div>
           </div>
+
+          <p className="pricing-also">
+            Also available: <a href="https://buy.stripe.com/bJe6oHccm4wL3RY1Ww3gk03" target="_blank" rel="noopener noreferrer">Monthly at $4.99/mo</a>
+          </p>
         </div>
       </section>
 
-      {/* Download CTA */}
-      <section className="download" id="download">
+      {/* CTA */}
+      <section className="cta">
         <div className="section-inner">
-          <div className="download-box">
-            <div className="download-glow" />
-            <h2 className="download-title">Ready to optimize?</h2>
-            <p className="download-subtitle">
-              Download DMND Tweaks for free and start boosting your PC's performance today.
-            </p>
-            <div className="download-requirements">
-              <span>Windows 10/11</span>
-              <span className="dot">·</span>
-              <span>64-bit</span>
-              <span className="dot">·</span>
-              <span>~80MB</span>
-            </div>
-            <a href="https://github.com/DMNDCertified/dmnd-tweaks/releases/latest" target="_blank" rel="noopener noreferrer" className="btn-primary btn-large">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+          <div className="cta-box">
+            <h2>Your PC is leaving performance on the table.</h2>
+            <p>Download DMND Tweaks and fix that.</p>
+            <a href="https://github.com/DMNDCertified/dmnd-tweaks/releases/latest" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Download for Windows
+              <span className="btn-meta">Free &middot; No account needed</span>
             </a>
-            <p className="download-note">Free to use. No credit card needed.</p>
           </div>
         </div>
       </section>
@@ -372,15 +203,8 @@ export default function Home() {
       {/* Footer */}
       <footer className="footer">
         <div className="footer-inner">
-          <div className="footer-brand">
-            <div className="nav-logo" style={{ width: 28, height: 28 }}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-              </svg>
-            </div>
-            <span>DMND Tweaks</span>
-          </div>
-          <p className="footer-copy">&copy; 2026 DMND Tweaks. All rights reserved.</p>
+          <span className="footer-brand"><span className="nav-diamond small">&#9670;</span> DMND Tweaks</span>
+          <span className="footer-copy">&copy; 2026</span>
         </div>
       </footer>
     </main>
