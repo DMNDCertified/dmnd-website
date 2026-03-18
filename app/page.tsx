@@ -11,6 +11,13 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Detect password recovery tokens and redirect to reset page
+    const hash = window.location.hash;
+    if (hash && hash.includes("type=recovery")) {
+      window.location.href = "/reset-password" + hash;
+      return;
+    }
+
     const timer = setTimeout(() => setLoading(false), 1800);
     return () => clearTimeout(timer);
   }, []);
@@ -27,8 +34,8 @@ export default function Home() {
       </div>
 
       <main>
-        {/* Nav */}
-        <nav className="nav">
+        {/* Nav — floating glassmorphism */}
+        <nav className="nav" data-aos="fade-in" data-aos-duration="1000">
           <div className="nav-inner">
             <a href="/" className="nav-brand">
               <span className="nav-diamond">&#9670;</span>
@@ -43,7 +50,7 @@ export default function Home() {
           </div>
         </nav>
 
-        {/* Hero */}
+        {/* Hero — word-by-word stagger */}
         <section className="hero">
           <div className="hero-inner">
             <div className="hero-text">
@@ -60,12 +67,12 @@ export default function Home() {
                   </span>
                 ))}
               </h1>
-              <p className="hero-subtitle" data-aos="fade-in" data-aos-delay="600" data-aos-duration="1000" data-aos-easing="ease-in-out">
+              <p className="hero-subtitle" data-aos="fade-in" data-aos-delay="700" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 DMND Tweaks gives you 225+ one-click optimizations for Windows.
                 Boost FPS, lower input delay, kill background bloat —
                 all fully reversible.
               </p>
-              <div className="hero-actions" data-aos="fade-in" data-aos-delay="800" data-aos-duration="1000" data-aos-easing="ease-in-out">
+              <div className="hero-actions" data-aos="fade-in" data-aos-delay="900" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <a href="https://github.com/DMNDCertified/dmnd-tweaks/releases/latest" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Download for free
                 </a>
@@ -127,17 +134,17 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Feature row 1 — text left, visual right */}
+        {/* Feature row 1 — text left (fade-right staggered), visual right (fade-left) */}
         <section className="feat-section" id="features">
           <div className="feat-inner">
-            <div className="feat-text" data-aos="fade-right" data-aos-duration="1000">
-              <h2>225+ tweaks built for gamers</h2>
-              <p>
+            <div className="feat-text">
+              <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="0">225+ tweaks built for gamers</h2>
+              <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
                 Every tweak targets a real bottleneck — GPU scheduling, DPC latency,
                 TCP optimization, power plan tuning. No placebo toggles.
                 Auto-detects your hardware and only shows what applies.
               </p>
-              <div className="feat-chips">
+              <div className="feat-chips" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                 <span>GPU Optimization</span>
                 <span>Input Delay</span>
                 <span>Network</span>
@@ -146,7 +153,7 @@ export default function Home() {
                 <span>Memory</span>
               </div>
             </div>
-            <div className="feat-visual" data-aos="fade-left" data-aos-duration="1000">
+            <div className="feat-visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
               <div className="feat-card-stack">
                 {[
                   { cls: "gpu", title: "72 GPU tweaks", sub: "NVIDIA, AMD, Intel" },
@@ -167,18 +174,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Feature row 2 — reversed */}
+        {/* Feature row 2 — reversed: text right (fade-left staggered), visual left (fade-right) */}
         <section className="feat-section reversed">
           <div className="feat-inner">
-            <div className="feat-text" data-aos="fade-left" data-aos-duration="1000">
-              <h2>Smart hardware detection</h2>
-              <p>
+            <div className="feat-text">
+              <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="0">Smart hardware detection</h2>
+              <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
                 DMND reads your CPU model, GPU vendor, RAM config, and storage type.
                 Then recommends only the tweaks that make sense for your specific build.
                 Intel vs AMD, NVIDIA vs Radeon — different tweaks, automatically.
               </p>
             </div>
-            <div className="feat-visual" data-aos="fade-right" data-aos-duration="1000">
+            <div className="feat-visual" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
               <div className="detect-box">
                 {[
                   { label: "GPU", value: "NVIDIA RTX 4070", badge: "72 tweaks" },
@@ -197,12 +204,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Game support marquee */}
+        {/* Game support marquee — dual direction, gradient fade edges */}
         <section className="marquee-section">
           <div className="section-inner">
-            <h2 data-aos="fade-up" data-aos-duration="800">Optimized for your favorite games</h2>
+            <h2 data-aos="fade-up" data-aos-duration="1000">Optimized for your favorite games</h2>
           </div>
           <div className="marquee-wrap">
+            <div className="marquee-fade-left" />
+            <div className="marquee-fade-right" />
             <div className="marquee-track">
               {games.concat(games).map((game, i) => (
                 <div className="marquee-item" key={`a-${i}`}>{game}</div>
@@ -210,6 +219,8 @@ export default function Home() {
             </div>
           </div>
           <div className="marquee-wrap">
+            <div className="marquee-fade-left" />
+            <div className="marquee-fade-right" />
             <div className="marquee-track reverse">
               {games.concat(games).map((game, i) => (
                 <div className="marquee-item" key={`b-${i}`}>{game}</div>
@@ -218,7 +229,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Feature cards grid */}
+        {/* Feature cards grid — 2x2 with fade-up stagger */}
         <section className="cards-section">
           <div className="section-inner">
             <div className="cards-grid">
@@ -228,7 +239,7 @@ export default function Home() {
                 { title: "Game Mode", desc: "One-click profile that kills background processes, boosts priority, and maximizes resources for your game.", icon: "bolt" },
                 { title: "Apply in seconds", desc: "No complicated setup. Download, pick your goal, toggle tweaks. Your PC is faster in under a minute.", icon: "clock" },
               ].map((card, i) => (
-                <div className="info-card" key={i} data-aos="fade-up" data-aos-duration="500" data-aos-delay={i * 100}>
+                <div className="info-card" key={i} data-aos="fade-up" data-aos-duration="1000" data-aos-delay={i * 100}>
                   <div className="ic-icon">
                     {card.icon === "shield" && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>}
                     {card.icon === "monitor" && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>}
@@ -246,13 +257,13 @@ export default function Home() {
         {/* Pricing */}
         <section className="pricing" id="pricing">
           <div className="section-inner">
-            <div className="pricing-header" data-aos="fade-up" data-aos-duration="800">
+            <div className="pricing-header" data-aos="fade-up" data-aos-duration="1000">
               <h2>Go premium for the full toolkit</h2>
               <p>Free gets you started. Premium unlocks everything.</p>
             </div>
 
             <div className="price-grid">
-              <div className="price-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
+              <div className="price-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                 <h3>Free</h3>
                 <div className="price-amount">$0</div>
                 <p className="price-note">Forever free</p>
@@ -268,7 +279,7 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="price-card price-card-pop" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+              <div className="price-card price-card-pop" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                 <span className="price-badge">popular</span>
                 <h3>Yearly</h3>
                 <div className="price-amount">$29.99<span>/yr</span></div>
@@ -286,7 +297,7 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="price-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+              <div className="price-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <h3>Lifetime</h3>
                 <div className="price-amount">$49.99</div>
                 <p className="price-note">One-time payment</p>
@@ -303,16 +314,25 @@ export default function Home() {
               </div>
             </div>
 
-            <p className="pricing-also" data-aos="fade-in" data-aos-delay="300">
+            <p className="pricing-also" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
               Also available: <a href="https://buy.stripe.com/bJe6oHccm4wL3RY1Ww3gk03" target="_blank" rel="noopener noreferrer">Monthly at $4.99/mo</a>
             </p>
           </div>
         </section>
 
-        {/* CTA */}
+        {/* CTA — SVG dot grid background */}
         <section className="cta">
           <div className="section-inner">
             <div className="cta-box" data-aos="fade-up" data-aos-duration="1000">
+              {/* Dot grid SVG background */}
+              <svg className="cta-dot-grid" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <pattern id="dotGrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+                    <circle cx="1.5" cy="1.5" r="1" fill="rgba(255,255,255,0.06)" />
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#dotGrid)" />
+              </svg>
               <h2>Eliminate lag, stutters, and<br />wasted performance</h2>
               <p>Download DMND Tweaks and get the most out of your hardware.</p>
               <div className="cta-actions">
